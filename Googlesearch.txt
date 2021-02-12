@@ -1,0 +1,27 @@
+package test;
+
+public class Google_Search {
+
+
+    public void setup(){
+
+	System.setProperty("webdriver.gecko.driver", "");
+        
+        WebDriver d = new FirefoxDriver();
+
+        d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        d.get("https://www.google.com/");
+        
+        d.findElement(By.name("q")).sendkeys("ducks");
+        
+        d.findElement(By.name("btnK")).click();
+        
+        String verifyTxt=d.findElement(By.xpath("//span[@text'Duck')]").getText();
+        Assert.assertTrue("Duck",verifyTxt);
+
+        
+
+    }
+
+}

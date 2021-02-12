@@ -1,0 +1,4 @@
+Scenario: Search the text duck and verify the content
+  Given I launch the browser
+  And I enter the URL to search the text
+  Then I verify the assertion
