@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions( plugin = {"pretty","html:target/html"},
         features = {"src/test/features"},
         glue={"Steps"},
-        tags={"@smoke"}
+        tags={"@validate"}
 )
 
 public class Runner {
