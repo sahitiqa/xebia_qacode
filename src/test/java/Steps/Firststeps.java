@@ -21,7 +21,7 @@ public class Firststeps {
 
     Response response;
 
-        @Given("^I enter the URL for the service$")
+     @Given("^I enter the URL for the service$")
             public void URL(){
             RestAssured.baseURI="https://jsonplaceholder.typicode.com";
     }
@@ -40,3 +40,5 @@ public class Firststeps {
             Assert.assertEquals(responseCode,res);
             Assert.assertEquals(body,xyz);
     }
+    
+}
